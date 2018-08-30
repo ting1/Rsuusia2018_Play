@@ -632,4 +632,108 @@ window.skins={};
 		return t;
 	};
 	return VSliderSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/levelgroup.exml'] = window.chooselevel = (function (_super) {
+	__extends(chooselevel, _super);
+	function chooselevel() {
+		_super.call(this);
+		this.skinParts = ["lv_group"];
+		
+		this.height = 300;
+		this.width = 400;
+		this.elementsContent = [this._Image1_i(),this._Label1_i(),this.lv_group_i()];
+	}
+	var _proto = chooselevel.prototype;
+
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 15.4;
+		t.height = 154;
+		t.source = "border_png";
+		t.width = 400;
+		t.x = 0;
+		t.y = 15.4;
+		return t;
+	};
+	_proto._Label1_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 26;
+		t.size = 20;
+		t.text = "关卡选择";
+		t.textColor = 0x141111;
+		t.width = 89;
+		t.x = 154.5;
+		t.y = 11;
+		return t;
+	};
+	_proto.lv_group_i = function () {
+		var t = new eui.Group();
+		this.lv_group = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 114;
+		t.width = 397;
+		t.x = 3;
+		t.y = 39;
+		t.layout = this._BasicLayout1_i();
+		return t;
+	};
+	_proto._BasicLayout1_i = function () {
+		var t = new eui.BasicLayout();
+		return t;
+	};
+	return chooselevel;
+})(eui.Skin);generateEUI.paths['resource/skins/popup.exml'] = window.Tou = (function (_super) {
+	__extends(Tou, _super);
+	function Tou() {
+		_super.call(this);
+		this.skinParts = ["btn_comple","lb_text"];
+		
+		this.height = 300;
+		this.width = 400;
+		this.elementsContent = [this._Image1_i(),this.btn_comple_i(),this.lb_text_i()];
+	}
+	var _proto = Tou.prototype;
+
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 162;
+		t.source = "border_png";
+		t.width = 398;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto.btn_comple_i = function () {
+		var t = new eui.Button();
+		this.btn_comple = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0.76;
+		t.height = 38;
+		t.label = "";
+		t.width = 87;
+		t.x = 155.5;
+		t.y = 112.76;
+		return t;
+	};
+	_proto.lb_text_i = function () {
+		var t = new eui.Label();
+		this.lb_text = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 56;
+		t.text = "";
+		t.textAlign = "center";
+		t.textColor = 0x0a0909;
+		t.verticalAlign = "middle";
+		t.width = 191;
+		t.x = 98;
+		t.y = 30;
+		return t;
+	};
+	return Tou;
 })(eui.Skin);
