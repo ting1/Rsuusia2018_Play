@@ -632,40 +632,115 @@ window.skins={};
 		return t;
 	};
 	return VSliderSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/gamestage.exml'] = window.gamestage = (function (_super) {
+	__extends(gamestage, _super);
+	function gamestage() {
+		_super.call(this);
+		this.skinParts = ["btn_rol","btn_fillup","btn_choose","btn_back","ll_level","btn_comple"];
+		
+		this.height = 1136;
+		this.width = 640;
+		this.elementsContent = [this._Image1_i(),this.btn_rol_i(),this.btn_fillup_i(),this.btn_choose_i(),this.btn_back_i(),this.ll_level_i(),this.btn_comple_i()];
+	}
+	var _proto = gamestage.prototype;
+
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 19.85;
+		t.anchorOffsetY = -14.6;
+		t.height = 1080;
+		t.width = 720;
+		t.x = 19.85;
+		t.y = -14.6;
+		return t;
+	};
+	_proto.btn_rol_i = function () {
+		var t = new eui.Button();
+		this.btn_rol = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 60;
+		t.label = "点击旋转";
+		t.left = 155;
+		t.verticalCenter = 378;
+		return t;
+	};
+	_proto.btn_fillup_i = function () {
+		var t = new eui.Button();
+		this.btn_fillup = t;
+		t.height = 60;
+		t.label = "点击翻转";
+		t.left = 286;
+		t.verticalCenter = 378;
+		return t;
+	};
+	_proto.btn_choose_i = function () {
+		var t = new eui.Button();
+		this.btn_choose = t;
+		t.label = "选关";
+		t.x = 473;
+		t.y = 70.3;
+		return t;
+	};
+	_proto.btn_back_i = function () {
+		var t = new eui.Button();
+		this.btn_back = t;
+		t.label = "返回";
+		t.x = 55;
+		t.y = 60.3;
+		return t;
+	};
+	_proto.ll_level_i = function () {
+		var t = new eui.Label();
+		this.ll_level = t;
+		t.horizontalCenter = 3;
+		t.text = "Label";
+		t.y = 70.3;
+		return t;
+	};
+	_proto.btn_comple_i = function () {
+		var t = new eui.Button();
+		this.btn_comple = t;
+		t.height = 60;
+		t.label = "提交";
+		t.x = 423;
+		t.y = 916;
+		return t;
+	};
+	return gamestage;
 })(eui.Skin);generateEUI.paths['resource/skins/levelgroup.exml'] = window.chooselevel = (function (_super) {
 	__extends(chooselevel, _super);
 	function chooselevel() {
 		_super.call(this);
-		this.skinParts = ["lv_group"];
+		this.skinParts = ["lv_group","btn_close"];
 		
-		this.height = 300;
-		this.width = 400;
-		this.elementsContent = [this._Image1_i(),this._Label1_i(),this.lv_group_i()];
+		this.height = 500;
+		this.width = 510;
+		this.elementsContent = [this._Image1_i(),this._Label1_i(),this.lv_group_i(),this.btn_close_i()];
 	}
 	var _proto = chooselevel.prototype;
 
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
 		t.anchorOffsetX = 0;
-		t.anchorOffsetY = 15.4;
-		t.height = 154;
+		t.anchorOffsetY = 21.15;
+		t.height = 400;
 		t.source = "border_png";
-		t.width = 400;
+		t.width = 510;
 		t.x = 0;
-		t.y = 15.4;
+		t.y = 0;
 		return t;
 	};
 	_proto._Label1_i = function () {
 		var t = new eui.Label();
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 26;
-		t.size = 20;
+		t.horizontalCenter = 0;
+		t.size = 24;
 		t.text = "关卡选择";
 		t.textColor = 0x141111;
-		t.width = 89;
-		t.x = 154.5;
-		t.y = 11;
+		t.top = 28;
+		t.verticalAlign = "bottom";
 		return t;
 	};
 	_proto.lv_group_i = function () {
@@ -673,15 +748,24 @@ window.skins={};
 		this.lv_group = t;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 114;
-		t.width = 397;
-		t.x = 3;
-		t.y = 39;
-		t.layout = this._BasicLayout1_i();
+		t.height = 315.15;
+		t.horizontalCenter = 0;
+		t.width = 460;
+		t.y = 70;
+		t.layout = this._TileLayout1_i();
 		return t;
 	};
-	_proto._BasicLayout1_i = function () {
-		var t = new eui.BasicLayout();
+	_proto._TileLayout1_i = function () {
+		var t = new eui.TileLayout();
+		return t;
+	};
+	_proto.btn_close_i = function () {
+		var t = new eui.Button();
+		this.btn_close = t;
+		t.label = "关闭";
+		t.width = 70;
+		t.x = 415;
+		t.y = 15;
 		return t;
 	};
 	return chooselevel;
