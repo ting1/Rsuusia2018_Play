@@ -33,7 +33,8 @@
 		"resource/skins/gamestage.exml",
 		"resource/skins/levelItem.exml",
 		"resource/skins/levelgroup.exml",
-		"resource/skins/popup.exml"
+		"resource/skins/popup.exml",
+		"resource/skins/startgame.exml"
 	],
 	"path": "resource/default.thm.json"
 }

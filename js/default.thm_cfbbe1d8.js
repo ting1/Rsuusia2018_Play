@@ -835,8 +835,8 @@ window.skins={};
 		_super.call(this);
 		this.skinParts = ["lv_group","btn_close"];
 		
-		this.height = 500;
-		this.width = 510;
+		this.height = 1136;
+		this.width = 640;
 		this.elementsContent = [this._Image1_i(),this._Label1_i(),this.lv_group_i(),this.btn_close_i()];
 	}
 	var _proto = chooselevel.prototype;
@@ -846,10 +846,10 @@ window.skins={};
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 21.15;
 		t.height = 400;
+		t.horizontalCenter = 0;
 		t.source = "border_png";
 		t.width = 510;
-		t.x = 0;
-		t.y = 0;
+		t.y = 140.91;
 		return t;
 	};
 	_proto._Label1_i = function () {
@@ -859,8 +859,9 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.size = 24;
 		t.text = "关卡选择";
+		t.textAlign = "center";
 		t.textColor = 0x141111;
-		t.top = 28;
+		t.top = 169;
 		t.verticalAlign = "bottom";
 		return t;
 	};
@@ -869,10 +870,10 @@ window.skins={};
 		this.lv_group = t;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 315.15;
+		t.height = 306.06;
 		t.horizontalCenter = 0;
 		t.width = 460;
-		t.y = 70;
+		t.y = 210.91;
 		t.layout = this._TileLayout1_i();
 		return t;
 	};
@@ -885,8 +886,8 @@ window.skins={};
 		this.btn_close = t;
 		t.label = "关闭";
 		t.width = 70;
-		t.x = 415;
-		t.y = 15;
+		t.x = 480;
+		t.y = 155.91;
 		return t;
 	};
 	return chooselevel;
@@ -941,4 +942,68 @@ window.skins={};
 		return t;
 	};
 	return Tou;
+})(eui.Skin);generateEUI.paths['resource/skins/startgame.exml'] = window.startgame = (function (_super) {
+	__extends(startgame, _super);
+	function startgame() {
+		_super.call(this);
+		this.skinParts = ["btn_easy","btn_diff"];
+		
+		this.height = 1136;
+		this.width = 640;
+		this.elementsContent = [this._Image1_i(),this._Label1_i(),this.btn_easy_i(),this.btn_diff_i()];
+	}
+	var _proto = startgame.prototype;
+
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 1136;
+		t.source = "123_png";
+		t.width = 640;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto._Label1_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 102;
+		t.size = 50;
+		t.text = "智力方块";
+		t.textAlign = "center";
+		t.verticalAlign = "middle";
+		t.width = 306;
+		t.x = 167;
+		t.y = 68;
+		return t;
+	};
+	_proto.btn_easy_i = function () {
+		var t = new eui.Button();
+		this.btn_easy = t;
+		t.anchorOffsetX = 182;
+		t.anchorOffsetY = 52;
+		t.height = 100;
+		t.label = "简单模式";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.width = 360;
+		t.x = 314;
+		t.y = 620;
+		return t;
+	};
+	_proto.btn_diff_i = function () {
+		var t = new eui.Button();
+		this.btn_diff = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 100;
+		t.label = "困难模式";
+		t.width = 360;
+		t.x = 138;
+		t.y = 736;
+		return t;
+	};
+	return startgame;
 })(eui.Skin);
