@@ -16,6 +16,7 @@
 	},
 	"autoGenerateExmlsList": true,
 	"exmls": [
+		"resource/eui_skins/ButtonCoSkin.exml",
 		"resource/eui_skins/ButtonSkin.exml",
 		"resource/eui_skins/CheckBoxSkin.exml",
 		"resource/eui_skins/HScrollBarSkin.exml",
@@ -30,6 +31,7 @@
 		"resource/eui_skins/VScrollBarSkin.exml",
 		"resource/eui_skins/VSliderSkin.exml",
 		"resource/skins/gamestage.exml",
+		"resource/skins/levelItem.exml",
 		"resource/skins/levelgroup.exml",
 		"resource/skins/popup.exml"
 	],

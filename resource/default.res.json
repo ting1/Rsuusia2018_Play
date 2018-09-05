@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,l1_json,color_0_png,color_1_png,color_2_png,color_3_png,color_4_png,color_5_png,color_6_png,color_7_png,color_8_png,color_9_png",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,l1_json,color_0_png,color_1_png,color_2_png,color_3_png,color_4_png,color_5_png,color_6_png,color_7_png,color_8_png,color_9_png,123_png,button_co_png",
 			"name": "preload"
 		}
 	],
@@ -190,6 +190,16 @@
 			"url": "res/color_9.png",
 			"type": "image",
 			"name": "color_9_png"
+		},
+		{
+			"url": "res/123.png",
+			"type": "image",
+			"name": "123_png"
+		},
+		{
+			"url": "assets/Button/button_co.png",
+			"type": "image",
+			"name": "button_co_png"
 		}
 	]
 }

@@ -10,7 +10,66 @@ window.skins={};
                 window.generateEUI = {};
                 generateEUI.paths = {};
                 generateEUI.styles = undefined;
-                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml"};generateEUI.paths['resource/eui_skins/ButtonSkin.exml'] = window.skins.ButtonSkin = (function (_super) {
+                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml"};generateEUI.paths['resource/eui_skins/ButtonCoSkin.exml'] = window.skins.ButtonSkin = (function (_super) {
+	__extends(ButtonSkin, _super);
+	function ButtonSkin() {
+		_super.call(this);
+		this.skinParts = ["labelDisplay","iconDisplay"];
+		
+		this.minHeight = 50;
+		this.minWidth = 100;
+		this.elementsContent = [this._Image1_i(),this.labelDisplay_i(),this.iconDisplay_i()];
+		this.states = [
+			new eui.State ("up",
+				[
+				])
+			,
+			new eui.State ("down",
+				[
+					new eui.SetProperty("_Image1","source","button_down_png")
+				])
+			,
+			new eui.State ("disabled",
+				[
+					new eui.SetProperty("_Image1","alpha",0.5)
+				])
+		];
+	}
+	var _proto = ButtonSkin.prototype;
+
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		this._Image1 = t;
+		t.fillMode = "scale";
+		t.percentHeight = 100;
+		t.scale9Grid = new egret.Rectangle(1,3,8,8);
+		t.source = "button_co_png";
+		t.percentWidth = 100;
+		return t;
+	};
+	_proto.labelDisplay_i = function () {
+		var t = new eui.Label();
+		this.labelDisplay = t;
+		t.bottom = 8;
+		t.left = 8;
+		t.right = 8;
+		t.size = 20;
+		t.textAlign = "center";
+		t.textColor = 0xFFFFFF;
+		t.top = 8;
+		t.verticalAlign = "middle";
+		return t;
+	};
+	_proto.iconDisplay_i = function () {
+		var t = new eui.Image();
+		this.iconDisplay = t;
+		t.horizontalCenter = 0;
+		t.source = "button_co_png";
+		t.verticalCenter = 0;
+		return t;
+	};
+	return ButtonSkin;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/ButtonSkin.exml'] = window.skins.ButtonSkin = (function (_super) {
 	__extends(ButtonSkin, _super);
 	function ButtonSkin() {
 		_super.call(this);
@@ -648,8 +707,9 @@ window.skins={};
 		var t = new eui.Image();
 		t.anchorOffsetX = 19.85;
 		t.anchorOffsetY = -14.6;
-		t.height = 1080;
-		t.width = 720;
+		t.height = 1136;
+		t.source = "123_png";
+		t.width = 640;
 		t.x = 19.85;
 		t.y = -14.6;
 		return t;
@@ -661,8 +721,8 @@ window.skins={};
 		t.anchorOffsetY = 0;
 		t.height = 60;
 		t.label = "点击旋转";
-		t.left = 155;
-		t.verticalCenter = 378;
+		t.left = 124;
+		t.verticalCenter = 408;
 		return t;
 	};
 	_proto.btn_fillup_i = function () {
@@ -670,44 +730,105 @@ window.skins={};
 		this.btn_fillup = t;
 		t.height = 60;
 		t.label = "点击翻转";
-		t.left = 286;
-		t.verticalCenter = 378;
+		t.left = 270;
+		t.verticalCenter = 408;
 		return t;
 	};
 	_proto.btn_choose_i = function () {
 		var t = new eui.Button();
 		this.btn_choose = t;
 		t.label = "选关";
-		t.x = 473;
-		t.y = 70.3;
+		t.x = 523;
+		t.y = 35.3;
 		return t;
 	};
 	_proto.btn_back_i = function () {
 		var t = new eui.Button();
 		this.btn_back = t;
 		t.label = "返回";
-		t.x = 55;
-		t.y = 60.3;
+		t.x = 24.33;
+		t.y = 35.3;
 		return t;
 	};
 	_proto.ll_level_i = function () {
 		var t = new eui.Label();
 		this.ll_level = t;
-		t.horizontalCenter = 3;
+		t.horizontalCenter = 0;
 		t.text = "Label";
-		t.y = 70.3;
+		t.y = 45.3;
 		return t;
 	};
 	_proto.btn_comple_i = function () {
 		var t = new eui.Button();
 		this.btn_comple = t;
+		t.anchorOffsetY = 0;
 		t.height = 60;
 		t.label = "提交";
 		t.x = 423;
-		t.y = 916;
+		t.y = 946;
 		return t;
 	};
 	return gamestage;
+})(eui.Skin);generateEUI.paths['resource/skins/levelItem.exml'] = window.levelItem = (function (_super) {
+	__extends(levelItem, _super);
+	function levelItem() {
+		_super.call(this);
+		this.skinParts = ["image","btn_num_level","btn_text"];
+		
+		this.height = 70;
+		this.width = 70;
+		this.elementsContent = [this.image_i(),this.btn_num_level_i(),this.btn_text_i()];
+		this.states = [
+			new eui.State ("up",
+				[
+				])
+			,
+			new eui.State ("down",
+				[
+					new eui.SetProperty("image","source","button_down_png")
+				])
+			,
+			new eui.State ("disabled",
+				[
+				])
+		];
+	}
+	var _proto = levelItem.prototype;
+
+	_proto.image_i = function () {
+		var t = new eui.Image();
+		this.image = t;
+		t.anchorOffsetX = -1;
+		t.anchorOffsetY = 2;
+		t.height = 70;
+		t.scale9Grid = new egret.Rectangle(2,2,12,12);
+		t.source = "button_up_png";
+		t.width = 70;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto.btn_num_level_i = function () {
+		var t = new eui.Label();
+		this.btn_num_level = t;
+		t.horizontalCenter = 1;
+		t.size = 20;
+		t.text = "1";
+		t.verticalAlign = "middle";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.btn_text_i = function () {
+		var t = new eui.Label();
+		this.btn_text = t;
+		t.right = 0;
+		t.size = 15;
+		t.text = "通关";
+		t.verticalAlign = "middle";
+		t.y = 0;
+		return t;
+	};
+	return levelItem;
 })(eui.Skin);generateEUI.paths['resource/skins/levelgroup.exml'] = window.chooselevel = (function (_super) {
 	__extends(chooselevel, _super);
 	function chooselevel() {
