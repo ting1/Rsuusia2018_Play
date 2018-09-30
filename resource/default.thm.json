@@ -31,8 +31,10 @@
 		"resource/eui_skins/VScrollBarSkin.exml",
 		"resource/eui_skins/VSliderSkin.exml",
 		"resource/skins/gamestage.exml",
+		"resource/skins/leaderitem.exml",
 		"resource/skins/levelItem.exml",
 		"resource/skins/levelgroup.exml",
+		"resource/skins/levelleader.exml",
 		"resource/skins/popup.exml",
 		"resource/skins/startgame.exml"
 	],

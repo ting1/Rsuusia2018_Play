@@ -495,15 +495,19 @@ window.skins={};
 	_proto.horizontalScrollBar_i = function () {
 		var t = new eui.HScrollBar();
 		this.horizontalScrollBar = t;
+		t.autoVisibility = false;
 		t.bottom = 0;
+		t.visible = false;
 		t.percentWidth = 100;
 		return t;
 	};
 	_proto.verticalScrollBar_i = function () {
 		var t = new eui.VScrollBar();
 		this.verticalScrollBar = t;
+		t.autoVisibility = false;
 		t.percentHeight = 100;
 		t.right = 0;
+		t.visible = false;
 		return t;
 	};
 	return ScrollerSkin;
@@ -695,11 +699,11 @@ window.skins={};
 	__extends(gamestage, _super);
 	function gamestage() {
 		_super.call(this);
-		this.skinParts = ["btn_rol","btn_fillup","btn_choose","btn_back","ll_level","btn_comple"];
+		this.skinParts = ["btn_rol","btn_fillup","btn_choose","ll_level","btn_tip","btn_back","im1","tx1"];
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this._Image1_i(),this.btn_rol_i(),this.btn_fillup_i(),this.btn_choose_i(),this.btn_back_i(),this.ll_level_i(),this.btn_comple_i()];
+		this.elementsContent = [this._Image1_i(),this.btn_rol_i(),this.btn_fillup_i(),this.btn_choose_i(),this.ll_level_i(),this.btn_tip_i(),this._Image2_i(),this._Image3_i(),this.btn_back_i(),this._Image4_i(),this.im1_i(),this._Label1_i(),this._Label2_i(),this._Label3_i(),this._Label4_i(),this.tx1_i()];
 	}
 	var _proto = gamestage.prototype;
 
@@ -719,35 +723,34 @@ window.skins={};
 		this.btn_rol = t;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 60;
-		t.label = "点击旋转";
-		t.left = 124;
-		t.verticalCenter = 408;
+		t.height = 70;
+		t.label = "";
+		t.width = 140;
+		t.x = 25;
+		t.y = 900;
 		return t;
 	};
 	_proto.btn_fillup_i = function () {
 		var t = new eui.Button();
 		this.btn_fillup = t;
-		t.height = 60;
-		t.label = "点击翻转";
-		t.left = 270;
-		t.verticalCenter = 408;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 70;
+		t.label = "";
+		t.width = 140;
+		t.x = 180;
+		t.y = 900;
 		return t;
 	};
 	_proto.btn_choose_i = function () {
 		var t = new eui.Button();
 		this.btn_choose = t;
-		t.label = "选关";
-		t.x = 523;
-		t.y = 35.3;
-		return t;
-	};
-	_proto.btn_back_i = function () {
-		var t = new eui.Button();
-		this.btn_back = t;
-		t.label = "返回";
-		t.x = 24.33;
-		t.y = 35.3;
+		t.anchorOffsetY = 0;
+		t.height = 70;
+		t.label = "";
+		t.width = 140;
+		t.x = 335;
+		t.y = 900;
 		return t;
 	};
 	_proto.ll_level_i = function () {
@@ -755,29 +758,215 @@ window.skins={};
 		this.ll_level = t;
 		t.horizontalCenter = 0;
 		t.text = "Label";
+		t.verticalAlign = "middle";
+		t.y = 60;
+		return t;
+	};
+	_proto.btn_tip_i = function () {
+		var t = new eui.Button();
+		this.btn_tip = t;
+		t.anchorOffsetY = 0;
+		t.height = 70;
+		t.label = "";
+		t.width = 140;
+		t.x = 490;
+		t.y = 900;
+		return t;
+	};
+	_proto._Image2_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 50;
+		t.source = "xuanz4_png";
+		t.touchEnabled = false;
+		t.width = 50;
+		t.x = 32;
+		t.y = 910;
+		return t;
+	};
+	_proto._Image3_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 50;
+		t.source = "xuanz3_png";
+		t.touchEnabled = false;
+		t.width = 50;
+		t.x = 185;
+		t.y = 910;
+		return t;
+	};
+	_proto.btn_back_i = function () {
+		var t = new eui.Image();
+		this.btn_back = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 80;
+		t.source = "back_png";
+		t.width = 80;
+		t.x = 42;
 		t.y = 45.3;
 		return t;
 	};
-	_proto.btn_comple_i = function () {
-		var t = new eui.Button();
-		this.btn_comple = t;
-		t.anchorOffsetY = 0;
+	_proto._Image4_i = function () {
+		var t = new eui.Image();
+		t.height = 40;
+		t.source = "guanka1_png";
+		t.touchEnabled = false;
+		t.width = 40;
+		t.x = 357;
+		t.y = 915;
+		return t;
+	};
+	_proto.im1_i = function () {
+		var t = new eui.Image();
+		this.im1 = t;
+		t.height = 40;
+		t.source = "tishi1_png";
+		t.touchEnabled = false;
+		t.width = 40;
+		t.x = 505;
+		t.y = 915;
+		return t;
+	};
+	_proto._Label1_i = function () {
+		var t = new eui.Label();
+		t.size = 20;
+		t.text = "Rotate";
+		t.textColor = 0xffffff;
+		t.touchEnabled = false;
+		t.x = 85;
+		t.y = 925;
+		return t;
+	};
+	_proto._Label2_i = function () {
+		var t = new eui.Label();
+		t.height = 20;
+		t.size = 20;
+		t.text = "Overturn";
+		t.touchEnabled = false;
+		t.width = 80;
+		t.x = 235;
+		t.y = 925;
+		return t;
+	};
+	_proto._Label3_i = function () {
+		var t = new eui.Label();
+		t.size = 20;
+		t.text = "Level";
+		t.touchEnabled = false;
+		t.x = 405;
+		t.y = 925;
+		return t;
+	};
+	_proto._Label4_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 3.33;
 		t.height = 60;
-		t.label = "提交";
-		t.x = 423;
-		t.y = 946;
+		t.horizontalCenter = 0;
+		t.size = 20;
+		t.text = "Tip:You would change the direction of the square by clicking the relevant button.";
+		t.textAlign = "center";
+		t.textColor = 0xd8cbcb;
+		t.verticalAlign = "middle";
+		t.width = 406;
+		t.y = 5;
+		return t;
+	};
+	_proto.tx1_i = function () {
+		var t = new eui.Label();
+		this.tx1 = t;
+		t.size = 20;
+		t.text = "Tip";
+		t.touchEnabled = false;
+		t.x = 555;
+		t.y = 925;
 		return t;
 	};
 	return gamestage;
+})(eui.Skin);generateEUI.paths['resource/skins/leaderitem.exml'] = window.ListItemSkin = (function (_super) {
+	__extends(ListItemSkin, _super);
+	function ListItemSkin() {
+		_super.call(this);
+		this.skinParts = ["lb_top","im_head","lb_toplevel","lb_toptext"];
+		
+		this.height = 70;
+		this.width = 490;
+		this.elementsContent = [this._Rect1_i(),this.lb_top_i(),this.im_head_i(),this.lb_toplevel_i(),this.lb_toptext_i()];
+		
+		eui.Binding.$bindProperties(this, ["hostComponent.data.index"],[0],this.lb_top,"text");
+		eui.Binding.$bindProperties(this, ["hostComponent.data.score"],[0],this.lb_toplevel,"text");
+	}
+	var _proto = ListItemSkin.prototype;
+
+	_proto._Rect1_i = function () {
+		var t = new eui.Rect();
+		t.ellipseWidth = 20;
+		t.fillColor = 0x119364;
+		t.percentHeight = 100;
+		t.percentWidth = 100;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto.lb_top_i = function () {
+		var t = new eui.Label();
+		this.lb_top = t;
+		t.fontFamily = "SimHei";
+		t.size = 25;
+		t.textColor = 0xfffcfc;
+		t.verticalCenter = 0.5;
+		t.x = 40;
+		return t;
+	};
+	_proto.im_head_i = function () {
+		var t = new eui.Image();
+		this.im_head = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 60;
+		t.width = 60;
+		t.x = 153;
+		t.y = 5;
+		return t;
+	};
+	_proto.lb_toplevel_i = function () {
+		var t = new eui.Label();
+		this.lb_toplevel = t;
+		t.size = 20;
+		t.textColor = 0xf9f4f4;
+		t.x = 361;
+		t.y = 25;
+		return t;
+	};
+	_proto.lb_toptext_i = function () {
+		var t = new eui.Label();
+		this.lb_toptext = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 40;
+		t.size = 20;
+		t.text = "Level";
+		t.textAlign = "center";
+		t.textColor = 0xf9f2f2;
+		t.verticalAlign = "middle";
+		t.width = 96;
+		t.x = 265;
+		t.y = 15;
+		return t;
+	};
+	return ListItemSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/levelItem.exml'] = window.levelItem = (function (_super) {
 	__extends(levelItem, _super);
 	function levelItem() {
 		_super.call(this);
-		this.skinParts = ["image","btn_num_level","btn_text"];
+		this.skinParts = ["image","btn_num_level","btn_tt","btn_lock"];
 		
 		this.height = 70;
 		this.width = 70;
-		this.elementsContent = [this.image_i(),this.btn_num_level_i(),this.btn_text_i()];
+		this.elementsContent = [this.image_i(),this.btn_num_level_i(),this.btn_tt_i(),this.btn_lock_i()];
 		this.states = [
 			new eui.State ("up",
 				[
@@ -785,7 +974,7 @@ window.skins={};
 			,
 			new eui.State ("down",
 				[
-					new eui.SetProperty("image","source","button_down_png")
+					new eui.SetProperty("image","source","bgit2_png")
 				])
 			,
 			new eui.State ("disabled",
@@ -802,7 +991,7 @@ window.skins={};
 		t.anchorOffsetY = 2;
 		t.height = 70;
 		t.scale9Grid = new egret.Rectangle(2,2,12,12);
-		t.source = "button_up_png";
+		t.source = "bgit_png";
 		t.width = 70;
 		t.x = 0;
 		t.y = 0;
@@ -814,18 +1003,35 @@ window.skins={};
 		t.horizontalCenter = 1;
 		t.size = 20;
 		t.text = "1";
+		t.textColor = 0x07f4b2;
 		t.verticalAlign = "middle";
 		t.verticalCenter = 0;
 		return t;
 	};
-	_proto.btn_text_i = function () {
-		var t = new eui.Label();
-		this.btn_text = t;
-		t.right = 0;
-		t.size = 15;
-		t.text = "通关";
-		t.verticalAlign = "middle";
-		t.y = 0;
+	_proto.btn_tt_i = function () {
+		var t = new eui.Image();
+		this.btn_tt = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 28.8;
+		t.source = "choose2_png";
+		t.visible = false;
+		t.width = 27.2;
+		t.x = 36;
+		t.y = 4.2;
+		return t;
+	};
+	_proto.btn_lock_i = function () {
+		var t = new eui.Image();
+		this.btn_lock = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 30;
+		t.horizontalCenter = 0;
+		t.source = "lock1_png";
+		t.visible = false;
+		t.width = 30;
+		t.y = 20;
 		return t;
 	};
 	return levelItem;
@@ -835,21 +1041,21 @@ window.skins={};
 		_super.call(this);
 		this.skinParts = ["lv_group","btn_close"];
 		
-		this.height = 1136;
-		this.width = 640;
-		this.elementsContent = [this._Image1_i(),this._Label1_i(),this.lv_group_i(),this.btn_close_i()];
+		this.height = 400;
+		this.width = 510;
+		this.elementsContent = [this._Rect1_i(),this._Label1_i(),this.lv_group_i(),this.btn_close_i()];
 	}
 	var _proto = chooselevel.prototype;
 
-	_proto._Image1_i = function () {
-		var t = new eui.Image();
-		t.anchorOffsetX = 0;
-		t.anchorOffsetY = 21.15;
+	_proto._Rect1_i = function () {
+		var t = new eui.Rect();
+		t.fillColor = 0x346560;
 		t.height = 400;
-		t.horizontalCenter = 0;
-		t.source = "border_png";
+		t.strokeColor = 0xfcf4f4;
+		t.strokeWeight = 10;
 		t.width = 510;
-		t.y = 140.91;
+		t.x = 0;
+		t.y = 0;
 		return t;
 	};
 	_proto._Label1_i = function () {
@@ -858,10 +1064,10 @@ window.skins={};
 		t.anchorOffsetY = 0;
 		t.horizontalCenter = 0;
 		t.size = 24;
-		t.text = "关卡选择";
+		t.text = "Level";
 		t.textAlign = "center";
-		t.textColor = 0x141111;
-		t.top = 169;
+		t.textColor = 0xe8edec;
+		t.top = 28;
 		t.verticalAlign = "bottom";
 		return t;
 	};
@@ -873,7 +1079,7 @@ window.skins={};
 		t.height = 306.06;
 		t.horizontalCenter = 0;
 		t.width = 460;
-		t.y = 210.91;
+		t.y = 80;
 		t.layout = this._TileLayout1_i();
 		return t;
 	};
@@ -882,12 +1088,90 @@ window.skins={};
 		return t;
 	};
 	_proto.btn_close_i = function () {
-		var t = new eui.Button();
+		var t = new eui.Image();
 		this.btn_close = t;
-		t.label = "关闭";
-		t.width = 70;
-		t.x = 480;
-		t.y = 155.91;
+		t.height = 50;
+		t.source = "close1_png";
+		t.width = 50;
+		t.x = 440;
+		t.y = 14;
+		return t;
+	};
+	return chooselevel;
+})(eui.Skin);generateEUI.paths['resource/skins/levelleader.exml'] = window.chooselevel = (function (_super) {
+	__extends(chooselevel, _super);
+	function chooselevel() {
+		_super.call(this);
+		this.skinParts = ["datalist","sl_lead","btn_close"];
+		
+		this.height = 600;
+		this.width = 510;
+		this.elementsContent = [this._Rect1_i(),this._Label1_i(),this.sl_lead_i(),this.btn_close_i()];
+	}
+	var _proto = chooselevel.prototype;
+
+	_proto._Rect1_i = function () {
+		var t = new eui.Rect();
+		t.fillColor = 0xf9f7f7;
+		t.percentHeight = 100;
+		t.percentWidth = 100;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto._Label1_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.horizontalCenter = 0.5;
+		t.size = 25;
+		t.text = "Leaderboard";
+		t.textAlign = "center";
+		t.textColor = 0x070707;
+		t.verticalAlign = "bottom";
+		t.y = 20;
+		return t;
+	};
+	_proto.sl_lead_i = function () {
+		var t = new eui.Scroller();
+		this.sl_lead = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 518;
+		t.horizontalCenter = 0;
+		t.scrollPolicyH = "off";
+		t.percentWidth = 100;
+		t.y = 72;
+		t.viewport = this.datalist_i();
+		return t;
+	};
+	_proto.datalist_i = function () {
+		var t = new eui.List();
+		this.datalist = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 522;
+		t.percentWidth = 100;
+		t.x = 0;
+		t.y = 8;
+		t.layout = this._VerticalLayout1_i();
+		return t;
+	};
+	_proto._VerticalLayout1_i = function () {
+		var t = new eui.VerticalLayout();
+		t.gap = 10;
+		t.paddingLeft = 10;
+		t.paddingRight = 10;
+		return t;
+	};
+	_proto.btn_close_i = function () {
+		var t = new eui.Image();
+		this.btn_close = t;
+		t.height = 50;
+		t.source = "close1_png";
+		t.width = 50;
+		t.x = 441;
+		t.y = 10;
 		return t;
 	};
 	return chooselevel;
@@ -897,19 +1181,21 @@ window.skins={};
 		_super.call(this);
 		this.skinParts = ["btn_comple","lb_text"];
 		
-		this.height = 300;
-		this.width = 400;
-		this.elementsContent = [this._Image1_i(),this.btn_comple_i(),this.lb_text_i()];
+		this.height = 262;
+		this.width = 398;
+		this.elementsContent = [this._Rect1_i(),this.btn_comple_i(),this.lb_text_i(),this._Image1_i(),this._Label1_i()];
 	}
 	var _proto = Tou.prototype;
 
-	_proto._Image1_i = function () {
-		var t = new eui.Image();
+	_proto._Rect1_i = function () {
+		var t = new eui.Rect();
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 162;
-		t.source = "border_png";
-		t.width = 398;
+		t.fillColor = 0x346560;
+		t.percentHeight = 100;
+		t.strokeColor = 0xfffcfc;
+		t.strokeWeight = 10;
+		t.percentWidth = 100;
 		t.x = 0;
 		t.y = 0;
 		return t;
@@ -919,11 +1205,11 @@ window.skins={};
 		this.btn_comple = t;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0.76;
-		t.height = 38;
+		t.height = 50;
 		t.label = "";
-		t.width = 87;
-		t.x = 155.5;
-		t.y = 112.76;
+		t.width = 131;
+		t.x = 133.5;
+		t.y = 183.26;
 		return t;
 	};
 	_proto.lb_text_i = function () {
@@ -932,13 +1218,34 @@ window.skins={};
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
 		t.height = 56;
-		t.text = "";
+		t.horizontalCenter = 0;
+		t.text = "111";
 		t.textAlign = "center";
-		t.textColor = 0x0a0909;
+		t.textColor = 0xfcf7f7;
 		t.verticalAlign = "middle";
-		t.width = 191;
-		t.x = 98;
-		t.y = 30;
+		t.width = 284;
+		t.y = 75;
+		return t;
+	};
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 35;
+		t.source = "next1_png";
+		t.touchEnabled = false;
+		t.width = 35;
+		t.x = 139;
+		t.y = 190;
+		return t;
+	};
+	_proto._Label1_i = function () {
+		var t = new eui.Label();
+		t.size = 20;
+		t.text = "Next";
+		t.touchEnabled = false;
+		t.x = 186.5;
+		t.y = 197.5;
 		return t;
 	};
 	return Tou;
@@ -946,11 +1253,11 @@ window.skins={};
 	__extends(startgame, _super);
 	function startgame() {
 		_super.call(this);
-		this.skinParts = ["btn_easy","btn_diff"];
+		this.skinParts = ["btn_easy","btn_diff","btn_leader","btn_share"];
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this._Image1_i(),this._Label1_i(),this.btn_easy_i(),this.btn_diff_i()];
+		this.elementsContent = [this._Image1_i(),this.btn_easy_i(),this.btn_diff_i(),this.btn_leader_i(),this._Image2_i(),this._Label1_i(),this._Image3_i(),this._Label2_i(),this._Label3_i(),this.btn_share_i()];
 	}
 	var _proto = startgame.prototype;
 
@@ -960,23 +1267,10 @@ window.skins={};
 		t.anchorOffsetY = 0;
 		t.height = 1136;
 		t.source = "123_png";
+		t.touchEnabled = false;
 		t.width = 640;
 		t.x = 0;
 		t.y = 0;
-		return t;
-	};
-	_proto._Label1_i = function () {
-		var t = new eui.Label();
-		t.anchorOffsetX = 0;
-		t.anchorOffsetY = 0;
-		t.height = 102;
-		t.size = 50;
-		t.text = "智力方块";
-		t.textAlign = "center";
-		t.verticalAlign = "middle";
-		t.width = 306;
-		t.x = 167;
-		t.y = 68;
 		return t;
 	};
 	_proto.btn_easy_i = function () {
@@ -985,12 +1279,12 @@ window.skins={};
 		t.anchorOffsetX = 182;
 		t.anchorOffsetY = 52;
 		t.height = 100;
-		t.label = "简单模式";
+		t.horizontalCenter = -7;
+		t.label = "";
 		t.scaleX = 1;
 		t.scaleY = 1;
 		t.width = 360;
-		t.x = 314;
-		t.y = 620;
+		t.y = 724;
 		return t;
 	};
 	_proto.btn_diff_i = function () {
@@ -999,10 +1293,83 @@ window.skins={};
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
 		t.height = 100;
-		t.label = "困难模式";
+		t.horizontalCenter = -7;
+		t.label = "";
 		t.width = 360;
-		t.x = 138;
-		t.y = 736;
+		t.y = 828;
+		return t;
+	};
+	_proto.btn_leader_i = function () {
+		var t = new eui.Image();
+		this.btn_leader = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 124;
+		t.source = "paixingban_png";
+		t.width = 128;
+		t.x = 17;
+		t.y = 50;
+		return t;
+	};
+	_proto._Image2_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 404;
+		t.source = "bg2_png";
+		t.width = 426;
+		t.x = 100;
+		t.y = 204;
+		return t;
+	};
+	_proto._Label1_i = function () {
+		var t = new eui.Label();
+		t.text = "智力榜";
+		t.textColor = 0x07b78a;
+		t.visible = false;
+		t.x = 40;
+		t.y = 159;
+		return t;
+	};
+	_proto._Image3_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 137.34;
+		t.horizontalCenter = 22.5;
+		t.source = "title3_png";
+		t.width = 384.67;
+		t.y = 50;
+		return t;
+	};
+	_proto._Label2_i = function () {
+		var t = new eui.Label();
+		t.fontFamily = "Times";
+		t.size = 40;
+		t.text = "Simple";
+		t.touchEnabled = false;
+		t.x = 256;
+		t.y = 702;
+		return t;
+	};
+	_proto._Label3_i = function () {
+		var t = new eui.Label();
+		t.fontFamily = "Times";
+		t.size = 40;
+		t.text = "Hard";
+		t.touchEnabled = false;
+		t.x = 273;
+		t.y = 858;
+		return t;
+	};
+	_proto.btn_share_i = function () {
+		var t = new eui.Image();
+		this.btn_share = t;
+		t.height = 100;
+		t.source = "share1_png";
+		t.width = 100;
+		t.x = 526;
+		t.y = 12;
 		return t;
 	};
 	return startgame;
